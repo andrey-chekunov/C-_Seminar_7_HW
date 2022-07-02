@@ -10,9 +10,9 @@ Console.Write("Enter m (rows): ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter n (columns): ");
 int columns = Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter a number position in the rows: ");
+Console.Write("Enter the row number: ");
 int rowPosition = Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter a number position in the columns: ");
+Console.Write("Enter the column number: ");
 int columnPosition = Convert.ToInt32(Console.ReadLine());
 int[,] array = new int[rows, columns];
 void FillArray(int[,] array)
@@ -38,6 +38,6 @@ void PrintArray(int[,] array)
 }
 FillArray(array);
 PrintArray(array);
-if (rowPosition < 0 | rowPosition > array.GetLength(0) - 1
-    | columnPosition > array.GetLength(1) - 1 | columnPosition < 0) Console.WriteLine("Error: the specified position does not exist in the array!");
+if (rowPosition < 0 | rowPosition > array.GetLength(0) | columnPosition > array.GetLength(1) | columnPosition < 0)
+    Console.WriteLine("Error: the specified position does not exist in the array!");
 else Console.WriteLine(array[rowPosition - 1, columnPosition - 1]);
