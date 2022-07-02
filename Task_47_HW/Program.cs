@@ -10,17 +10,17 @@ int rows = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter n (columns): ");
 int columns = Convert.ToInt32(Console.ReadLine());
 double[,] matrix = new double[rows, columns];
-void FillMatrix(double[,] matrix)                       
+void FillMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = Convert.ToDouble(new Random().Next(-10,10)) / (new Random().Next(1,11));
+            matrix[i, j] = Convert.ToDouble(new Random().Next(-10, 10)) / (new Random().Next(1, 11));
         }
     }
 }
-void PrintMatrix(double[,] matrix)                      
+void PrintMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
