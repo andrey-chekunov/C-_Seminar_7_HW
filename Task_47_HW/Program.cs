@@ -5,7 +5,9 @@
 // 8 7,8 -7,1 9
 
 Console.WriteLine("Specify a two-dimensional array of size m*n: ");
+Console.Write("Enter m (rows): ");
 int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter n (columns): ");
 int columns = Convert.ToInt32(Console.ReadLine());
 double[,] matrix = new double[rows, columns];
 void FillMatrix(double[,] matrix)                       
@@ -14,7 +16,7 @@ void FillMatrix(double[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = Convert.ToDouble(new Random().Next(-10,100)) / 10;
+            matrix[i, j] = Convert.ToDouble(new Random().Next(-10,10)) / (new Random().Next(1,11));
         }
     }
 }
